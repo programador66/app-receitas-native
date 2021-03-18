@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const Search = () => {
     return (
         <View>
-            <Text>Hello Search</Text>
+            <Text>Buscar Novidades</Text>
         </View>
         
     );

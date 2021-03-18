@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Octicons } from '@expo/vector-icons';
 import { 
     Container, TextTitle, LocationArea,
     TopArea, BottomArea, SearchInput,
-    TextTitleOpacity,
+    TextTitleOpacity, ButtomSearch
  } from './styles';
 
 import CardRecipes from '../../components/CardRecipies';
+import Modalize from '../../components/ModalizeSearch';
 
 const Home = () => {
-    const card = [0,1,2,3];
 
+    const [modalize, setModalize] = useState(false); 
+    const card = [0,1,2,3];
+    
+    const handleOpenModalize = () => {
+        setModalize(true);
+    }
     return (
         <Container>
             <TopArea>
@@ -18,10 +24,13 @@ const Home = () => {
                 <TextTitle>Sempre Perto de Você!</TextTitle>
                 <LocationArea>
                     <SearchInput
-                        placeholder="Buscar receitas"
-                        placeholderTextColor="#FF4500"
-                    />
-                    <Octicons name="search" size={24} color="#FF4500" />
+                        onPress={handleOpenModalize}
+                    >
+                        Burcas receitas
+                    </SearchInput>
+                    <ButtomSearch>
+                        <Octicons name="search" size={24} color="#FF4500" />
+                    </ButtomSearch>   
                 </LocationArea>
             </TopArea>
             <BottomArea>
@@ -32,6 +41,7 @@ const Home = () => {
                 }
                 
             </BottomArea>
+            <Modalize open={modalize} />
         </Container>
     );
 }

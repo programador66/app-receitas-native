@@ -43,8 +43,12 @@ export const LocationArea = styled.View`
    margin-top: 30px; 
 `;
 
-export const SearchInput = styled.TextInput`
+export const SearchInput = styled.Text`
    flex: 1;
    font-size: 16px;
    color: #FF4500;
+`;
+
+export const ButtomSearch = styled.TouchableOpacity`
+
 `;
