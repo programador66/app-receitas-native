@@ -4,28 +4,30 @@ import { Modalize } from 'react-native-modalize';
 
 import { Text, View } from 'react-native';
 
-const ModalizeSearch = ({open}) => {
+const ModalizeSearch = (props) => {
     const modalizeRef = useRef(null);
 
 
     const openModalize = () => {
-            console.log(open)
-        if (open) {
+        if (props.open) {
             modalizeRef.current?.open();
-        }
-        
+        }    
     }
 
     useEffect(() => {
-        console.log(open);
         openModalize();
-    },[open])
+    },[props.open])
+
+    const closeModalize = () => {
+        props.teste(false);
+    }
 
     return (
         <Modalize
             ref={modalizeRef}
-            snapPoint={450}
-            modalHeight={500}
+            snapPoint={600}
+            modalHeight={600}
+            onClose={closeModalize}
         >
             <View
                 style={{ flex: 1, height: 180, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
