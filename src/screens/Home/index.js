@@ -19,9 +19,7 @@ const Home = () => {
     }
 
     const  handleCloseModalize = (e) => {
-        console.log('----------')
-        console.log(e)
-        setModalize(false);
+        setModalize(e);
     }
 
     return (
@@ -48,7 +46,7 @@ const Home = () => {
                 }
                 
             </BottomArea>
-            <Modalize open={modalize} teste={ (e) => handleCloseModalize(e)} />
+            <Modalize open={modalize} handleModalize={ (e) => handleCloseModalize(e)} />
         </Container>
     );
 }

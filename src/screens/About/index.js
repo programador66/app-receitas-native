@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {Container, Title} from './styles';
 
 const About = () => {
     return (
-        <View>
-            <Text>Hello About</Text>
-        </View>
+        <Container>
+            <Title>Author: Caio César Lacerda</Title>
+        </Container>
         
     );
 }

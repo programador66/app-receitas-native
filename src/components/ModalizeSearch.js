@@ -19,14 +19,14 @@ const ModalizeSearch = (props) => {
     },[props.open])
 
     const closeModalize = () => {
-        props.teste(false);
+        props.handleModalize(false);
     }
 
     return (
         <Modalize
             ref={modalizeRef}
-            snapPoint={600}
-            modalHeight={600}
+            snapPoint={500}
+            modalHeight={500}
             onClose={closeModalize}
         >
             <View

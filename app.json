@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "teste",
+    "githubUrl": "https://github.com/programador66"
   }
 }
